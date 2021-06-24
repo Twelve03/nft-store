@@ -1,27 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { BiMenuAltRight } from "react-icons/bi";
+import NavLinks from "./NavLinks";
+
 const Nav = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
-    <nav className="lg:z-10 lg:absolute lg:w-full flex justify-around items-center">
-      <img
-        src="https://placeholderlogo.com/img/placeholder-logo-1.png"
-        alt=""
-        className="h-10 w-24"
-      />
-      <ul className=" w-2/4 flex justify-around">
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/about">About</Link>
-      </ul>
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-512/account-269-866236.png"
-        alt=""
-        className="w-5 h-5"
-      />
-      <img
-        src="https://icons-for-free.com/iconfiles/png/512/cart+ecommerce+shop+icon-1320166083122274571.png"
-        alt=""
-        className="w-5 h-5"
+    <nav>
+      {showMenu && (
+        <div
+          className="bg-black bg-opacity-30 fixed top-0 left-0 w-full h-full"
+          onClick={() => setShowMenu(false)}
+        ></div>
+      )}
+
+      {showMenu && (
+        <div className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow p-3">
+          <NavLinks closeMenu={() => setShowMenu(false)} />
+        </div>
+      )}
+
+      <BiMenuAltRight
+        className="text-2xl z-10 w-10"
+        onClick={() => setShowMenu(!showMenu)}
       />
     </nav>
   );

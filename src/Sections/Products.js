@@ -7,9 +7,9 @@ const Products = () => {
   );
 
   return (
-    <div className="lg:pt-10">
+    <div className="pt-10 flex flex-col justify-center items-center">
       {productList.map((product) => (
-        <div key={product.id} className="h-2/4 w-2/4 border-solid border-4 border-light-blue-500">
+        <div key={product.id} className="mt-4 h-2/4 w-2/4 border-solid border-4 border-light-blue-500">
           <Link to={`products/${product.id}`}>
             <h1>{product.name}</h1>
             <img src={product.img} className="h-1/4 w-1/4" alt="" />
