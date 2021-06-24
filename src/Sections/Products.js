@@ -7,15 +7,15 @@ const Products = () => {
   );
 
   return (
-    <div>
+    <div className="lg:pt-10">
       {productList.map((product) => (
-        <Link to={`products/${product.id}`} key={product.id}>
-          <div>
+        <div key={product.id} className="h-2/4 w-2/4 border-solid border-4 border-light-blue-500">
+          <Link to={`products/${product.id}`}>
             <h1>{product.name}</h1>
-            <img src={product.img} alt="" />
-            <p>{product.price}</p>
-          </div>
-        </Link>
+            <img src={product.img} className="h-1/4 w-1/4" alt="" />
+          </Link>
+          <p>{product.price}</p>
+        </div>
       ))}
     </div>
   );
