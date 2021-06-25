@@ -15,7 +15,7 @@ const Nav = () => {
       )}
 
       {showMenu && (
-        <div className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow p-3">
+        <div className="fixed rounded-r-lg bg-white top-0 left-0 w-4/5 h-full z-50 shadow p-3">
           <NavLinks closeMenu={() => setShowMenu(false)} />
         </div>
       )}

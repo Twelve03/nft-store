@@ -1,17 +1,25 @@
-const Home = () => {
-  return (
-    <>
-      <div className="pt-5 flex flex-col bg-primary border-solid border-2 h-screen justify-center items-center">
-        <h1>Time Buy</h1>
+import useAxios from "../Components/useAxios";
 
-        <img
-          src="https://www.hublot.com/sites/default/files/styles/watch_item_desktop_1x_scale_no_crop_600_6000_/public/2021-03/big-bang-unico-yellow-magic-42-mm-soldier.png?itok=WegD5XRC"
-          alt="mobile-main-watch"
-          className="h-3/4"
-        />
-        <p>Where time isn't an issue.</p>
+const Home = () => {
+  let featuredList = useAxios(
+    "https://60d1258d7de0b2001710a1cb.mockapi.io/items/"
+  );
+
+  return (
+    <div className="p-3">
+      <h1 className="pt-16">Featured NFTs</h1>
+      <div className="flex overflow-x-scroll items-center max-h-full max-w-full">
+        {featuredList.map((nft) => (
+          <div
+            key={nft.id}
+            className="m-2 p-2 rounded-lg flex flex-col justify-around border-solid border-2 h-64 min-w-max"
+          >
+            <img src={nft.img} alt="" className="h-48 w-48" />
+            <p>{nft.name}</p>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
