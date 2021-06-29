@@ -6,7 +6,7 @@ const NavLinks = ({ closeMenu }) => {
       <Link
         to="/"
         onClick={closeMenu}
-        className="text-blue-500 py-3 border-t border-b block"
+        className="text-blue-500 py-3 border-b block"
       >
         Home
       </Link>
