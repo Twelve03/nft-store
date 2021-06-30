@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Products = () => {
   let productList = useAxios(
-    "https://60d1258d7de0b2001710a1cb.mockapi.io/items/"
+    "https://60d1258d7de0b2001710a1cb.mockapi.io/nfts/"
   );
 
   return (

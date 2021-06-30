@@ -2,18 +2,18 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const useAxios = (url) => {
-  const [products, setProducts] = useState([]);
+  const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
     axios
       .get(url)
       .then((res) => {
-        setProducts(res.data);
+        setApiData(res.data);
       })
       .catch((error) => console.log(error));
   }, [url]);
 
-  return products;
+  return apiData;
 };
 
 export default useAxios;
