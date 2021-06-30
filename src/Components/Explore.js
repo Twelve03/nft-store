@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import axios from "axios";
 import SortMenu from "./SortMenu";
 
 const Explore = () => {
+  const [numOfElem, setNumOfElem] = useState(5);
   const [nfts, setNfts] = useState([]);
   const [showSort, setShowSort] = useState(false);
 
@@ -19,6 +19,8 @@ const Explore = () => {
     getNfts();
   }, []);
 
+  const slice = nfts.slice(0, numOfElem);
+
   return (
     <>
       <div className="flex items-center justify-between h-14 w-full">
@@ -28,20 +30,27 @@ const Explore = () => {
         <SortMenu setShowSort={setShowSort} nfts={nfts} showSort={showSort} />
       </div>
       <div className="flex flex-col items-center w-full">
-        {nfts.map((nft) => (
+        {slice.map((nft) => (
           <div
             key={nft.id}
-            className="relative flex flex-col justify-evenly items-center h-72 m-2 max-w-max"
+            className="relative flex flex-col justify-evenly items-center h-72 m-2 w-64"
           >
-            <img src={nft.img} className="rounded-2xl w-48 h-48" alt="" />
-            <p>{nft.name}</p>
-            <p>{nft.price}</p>
-            <div className="absolute left-3/4 flex items-center justify-center w-8 h-8 rounded-lg bg-green-200 bottom-24 right-24">
-              <AiOutlineShoppingCart className="text-2xl cursor-pointer" />
+            <img
+              src={nft.img}
+              className="absolute top-0 z-10 rounded-2xl w-48 h-48"
+              alt=""
+            />
+            <div className="pb-5 flex flex-col items-center justify-end absolute bottom-0 z-1 h-56 rounded-lg w-64 border-2">
+              <p>{nft.name}</p>
+              <p>{nft.price}</p>
             </div>
           </div>
         ))}
-        <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full">
+
+        <button
+          className="my-5 p-2 w-full border-2 border-black hover:bg-black hover:text-white font-bold rounded-lg"
+          onClick={() => setNumOfElem((prev) => prev + 5)}
+        >
           Load more
         </button>
       </div>

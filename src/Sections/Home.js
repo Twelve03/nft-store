@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <div>
       {/* Landing Page */}
-      <div className="p-1 flex justify-between flex-col items-left h-screen w-full bg-black bg-cover bg-center">
+      <div className="p-2 flex justify-between flex-col items-left h-screen w-full bg-black bg-cover bg-center">
         <img
-          src="http://24.media.tumblr.com/055790c6cbebc03c11e239a05a8653cb/tumblr_mxri5oDzoq1smtd9go1_500.gif"
+          src="https://i.pinimg.com/originals/9d/43/da/9d43da092565f9f5003c3aaa64292902.gif"
           alt=""
-          className="h-2/4"
+          className="h-2/4 pt-20"
         />
         <p className="text-gray-400 pl-6 -mb-7">NFT Marketplace</p>
         <h1 className="font-delagothicone text-white pl-6 text-3xl">

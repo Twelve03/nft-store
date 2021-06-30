@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="fixed z-10 w-full bg-white p-3 flex justify-between items-center h-12">
+    <header className="fixed z-50 w-full backdrop-filter bg-white bg-opacity-30 p-3 flex justify-between items-center h-12">
       <Link to="/">
         <img
-          src="https://placeholderlogo.com/img/placeholder-logo-1.png"
+          src="https://i.ibb.co/w7Bc5w7/Group-1.png"
           alt="logo"
-          className="h-10 w-28"
+          className="h-10 w-10"
         />
       </Link>
 

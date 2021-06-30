@@ -1,4 +1,3 @@
-import React from "react";
 import { AiFillCaretDown } from "react-icons/ai";
 
 const SortMenu = ({ nfts, setShowSort, showSort }) => {
