@@ -11,6 +11,13 @@ const NavLinks = ({ closeMenu }) => {
         Home
       </Link>
       <Link
+        to="/search"
+        onClick={closeMenu}
+        className="text-blue-500 py-3 border-b block"
+      >
+        Search
+      </Link>
+      <Link
         to="/products"
         onClick={closeMenu}
         className="text-blue-500 py-3 border-t border-b block"

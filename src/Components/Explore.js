@@ -24,9 +24,8 @@ const Explore = () => {
   return (
     <>
       <div className="flex items-center justify-between h-14 w-full">
-        <div className="flex overflow-x-scroll w-4/6">
-          <button>All</button>
-        </div>
+        <button className="mr-2">All</button>
+        <div className="flex items-center overflow-x-scroll w-4/6"></div>
         <SortMenu setShowSort={setShowSort} nfts={nfts} showSort={showSort} />
       </div>
       <div className="flex flex-col items-center w-full">
