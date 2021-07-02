@@ -1,11 +1,11 @@
-import React from 'react'
-
 const About = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <div className="min-h-screen">
+      <div className="h-screen"></div>
+      <div className="h-screen bg-blue-400"></div>
+      <div className="h-screen"></div>
+    </div>
+  );
+};
 
-export default About
+export default About;

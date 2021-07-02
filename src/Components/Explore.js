@@ -7,28 +7,54 @@ const Explore = () => {
   const [nfts, setNfts] = useState([]);
   const [showSort, setShowSort] = useState(false);
 
+  const getNfts = async () => {
+    await axios
+      .get("https://60d1258d7de0b2001710a1cb.mockapi.io/nfts")
+      .then((res) => {
+        setNfts(res.data);
+      })
+      .catch((error) => console.log(error));
+  };
+
   useEffect(() => {
-    const getNfts = async () => {
-      await axios
-        .get("https://60d1258d7de0b2001710a1cb.mockapi.io/nfts")
-        .then((res) => {
-          setNfts(res.data);
-        })
-        .catch((error) => console.log(error));
-    };
     getNfts();
   }, []);
 
   const slice = nfts.slice(0, numOfElem);
+  const categories = [...new Set(nfts.map((nft) => nft.category))];
 
   return (
-    <>
+    <div
+      className="w-full h-full"
+      onClick={() => {
+        if (showSort) {
+          setShowSort(!showSort);
+        }
+      }}
+    >
       <div className="flex items-center justify-between h-14 w-full">
-        <button className="mr-2">All</button>
-        <div className="flex items-center overflow-x-scroll w-4/6"></div>
+        <button
+          className="shadow hover:bg-black hover:text-white w-10"
+          onClick={getNfts}
+        >
+          All
+        </button>
+        <div className="mx-2 flex items-center overflow-x-scroll w-4/6">
+          {categories.map((category) => (
+            <p
+              key={categories.indexOf(category)}
+              className="mr-2 cursor-pointer w-24 font-medium"
+              onClick={() =>
+                setNfts(nfts.filter((nft) => nft.category === category))
+              }
+            >
+              {category}
+            </p>
+          ))}
+        </div>
         <SortMenu setShowSort={setShowSort} nfts={nfts} showSort={showSort} />
       </div>
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col mt-4 items-center w-full">
         {slice.map((nft) => (
           <div
             key={nft.id}
@@ -36,24 +62,26 @@ const Explore = () => {
           >
             <img
               src={nft.img}
-              className="absolute top-0 z-10 rounded-2xl w-48 h-48"
+              className="absolute border-t-2 top-0 z-10 rounded-2xl w-48 h-48"
               alt=""
             />
-            <div className="pb-5 flex flex-col items-center justify-end absolute bottom-0 z-1 h-56 rounded-lg w-64 border-2">
+            <div className="pb-5 flex flex-col items-center justify-end absolute bottom-0 z-1 h-56 rounded-lg shadow-lg border-t-2 w-64">
               <p>{nft.name}</p>
               <p>{nft.price}</p>
             </div>
           </div>
         ))}
 
-        <button
-          className="my-5 p-2 w-full border-2 border-black hover:bg-black hover:text-white font-bold rounded-lg"
-          onClick={() => setNumOfElem((prev) => prev + 5)}
-        >
-          Load more
-        </button>
+        {nfts.length >= 5 && (
+          <button
+            className="my-5 p-2 w-full border-2 border-black hover:bg-black hover:text-white font-bold rounded-lg"
+            onClick={() => setNumOfElem((prev) => prev + 5)}
+          >
+            Load more
+          </button>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 
