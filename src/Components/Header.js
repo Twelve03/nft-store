@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="fixed z-50 w-full backdrop-filter bg-white bg-opacity-30 p-3 flex justify-between items-center h-12">
+    <header className="fixed z-50 top-0 w-full backdrop-filter bg-white bg-opacity-30 p-3 flex justify-between items-center h-12">
       <Link to="/">
         <img
           src="https://i.ibb.co/w7Bc5w7/Group-1.png"

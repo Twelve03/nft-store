@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import useAxios from "./useAxios";
 import {
   HiOutlineArrowCircleRight,
@@ -18,9 +19,9 @@ const LiveAuctions = () => {
     setCurrent(current === 0 ? auctionList.length - 1 : current - 1);
   };
 
-  let auctionList = useAxios(
-    "https://60d1258d7de0b2001710a1cb.mockapi.io/auctions"
-  );
+  let nftsList = useAxios("https://60d1258d7de0b2001710a1cb.mockapi.io/nfts");
+
+  let auctionList = nftsList.filter((nft) => nft.liveauction === true);
 
   return (
     <div className="flex items-center w-full justify-center">
@@ -31,17 +32,19 @@ const LiveAuctions = () => {
       {auctionList.map((nft, index) => (
         <div key={nft.id}>
           {index === current && (
-            <div className="relative flex flex-col items-center justify-center w-72 h-72 border-2 rounded-2xl shadow-lg">
-              <img className="w-64 h-52 rounded-2xl" src={nft.img} alt="" />
-              <div className="w-60 mt-2">
-                <h1 className="font-medium text-gray-800">{nft.name}</h1>
-                <p className="font-bold">${nft.bid}</p>
+            <Link to={`/nft/${nft.id}`}>
+              <div className="relative flex flex-col items-center justify-center w-72 h-72 border-2 rounded-2xl shadow-lg">
+                <img className="w-64 h-52 rounded-2xl" src={nft.img} alt="" />
+                <div className="w-60 mt-2">
+                  <h1 className="font-medium text-gray-800">{nft.name}</h1>
+                  <p className="font-bold">${nft.bid}</p>
+                </div>
+                <div className="flex absolute justify-around items-center w-12 bottom-4 right-4 text-lg">
+                  <HiOutlineEye />
+                  <p>{nft.viewers}</p>
+                </div>
               </div>
-              <div className="flex absolute justify-around items-center w-12 bottom-4 right-4 text-lg">
-                <HiOutlineEye />
-                <p>{nft.viewers}</p>
-              </div>
-            </div>
+            </Link>
           )}
         </div>
       ))}

@@ -25,6 +25,13 @@ const NavLinks = ({ closeMenu }) => {
       >
         About <AiFillInfoCircle className="ml-2" />
       </Link>
+      <Link
+        to="/contact"
+        onClick={closeMenu}
+        className="flex items-center text-blue-500 py-3 border-t border-b block"
+      >
+        Contact us
+      </Link>
     </ul>
   );
 };

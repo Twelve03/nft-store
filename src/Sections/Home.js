@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import FeaturedNfts from "../Components/FeaturedNfts";
 import LiveAuctions from "../Components/LiveAuctions";
 import FeaturedSellers from "../Components/FeaturedSellers";
@@ -5,6 +6,9 @@ import Explore from "../Components/Explore";
 import Footer from "../Components/Footer";
 
 const Home = () => {
+  const exploreRef = useRef(null);
+  const executeScroll = () => exploreRef.current.scrollIntoView();
+
   return (
     <div>
       {/* Landing Page */}
@@ -19,7 +23,11 @@ const Home = () => {
           NFThis
           <br />━ For those with creative minds.
         </h1>
-        <button className="mb-7 ml-6 w-32 h-12 bg-transparent text-gray-200 font-bold border rounded-lg ">
+
+        <button
+          onClick={executeScroll}
+          className="mb-7 ml-6 w-32 h-12 bg-transparent text-gray-200 font-bold border rounded-lg "
+        >
           Explore
         </button>
       </div>
@@ -38,7 +46,7 @@ const Home = () => {
         </div>
 
         <h1 className="mt-16 mb-4 text-2xl w-full font-bold">Featured NFTs</h1>
-        <FeaturedNfts />
+        <FeaturedNfts/>
 
         <h1 className="mt-16 mb-4 text-2xl font-bold">Live auctions</h1>
         <LiveAuctions />
@@ -46,7 +54,9 @@ const Home = () => {
         <h1 className="mt-16 mb-4 text-2xl w-full font-bold">We recommend</h1>
         <FeaturedSellers />
 
-        <h1 className="mt-16 mb-4 text-2xl w-full font-bold">Explore</h1>
+        <h1 ref={exploreRef} className="mt-16 mb-4 text-2xl w-full font-bold">
+          Explore
+        </h1>
         <Explore />
       </div>
       <Footer />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import SortMenu from "./SortMenu";
 
@@ -32,14 +33,14 @@ const Explore = () => {
         }
       }}
     >
-      <div className="flex items-center justify-between h-14 w-full">
+      <div className="flex items-center justify-between h-20 w-full">
         <button
           className="shadow hover:bg-black hover:text-white w-10"
           onClick={getNfts}
         >
           All
         </button>
-        <div className="mx-2 flex items-center overflow-x-scroll w-4/6">
+        <div className="mx-2 flex items-center overflow-x-scroll w-4/6 h-16">
           {categories.map((category) => (
             <p
               key={categories.indexOf(category)}
@@ -56,20 +57,22 @@ const Explore = () => {
       </div>
       <div className="flex flex-col mt-4 items-center w-full">
         {slice.map((nft) => (
-          <div
-            key={nft.id}
-            className="relative flex flex-col justify-evenly items-center h-72 m-2 w-64"
-          >
-            <img
-              src={nft.img}
-              className="absolute border-t-2 top-0 z-10 rounded-2xl w-48 h-48"
-              alt=""
-            />
-            <div className="pb-5 flex flex-col items-center justify-end absolute bottom-0 z-1 h-56 rounded-lg shadow-lg border-t-2 w-64">
-              <p>{nft.name}</p>
-              <p>{nft.price}</p>
+          <Link key={nft.id} to={`/nft/${nft.id}`}>
+            <div
+              key={nft.id}
+              className="relative flex flex-col justify-evenly items-center h-72 m-2 w-64"
+            >
+              <img
+                src={nft.img}
+                className="absolute border-t-2 top-0 z-10 rounded-2xl w-48 h-48"
+                alt=""
+              />
+              <div className="pb-5 flex flex-col items-center justify-end absolute bottom-0 z-1 h-56 rounded-lg shadow-lg border-t-2 w-64">
+                <p>{nft.name}</p>
+                <p>{nft.price}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
 
         {nfts.length >= 5 && (

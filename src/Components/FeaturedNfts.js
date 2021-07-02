@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useAxios from "./useAxios";
 
 const FeaturedNfts = () => {
@@ -10,13 +11,14 @@ const FeaturedNfts = () => {
       {featuredList.map((nft) => {
         if (nft.featured) {
           return (
-            <div
-              key={nft.id}
-              className="m-2 p-2 rounded-lg flex flex-col justify-around border-solid border-2 h-64 min-w-max"
-            >
-              <img src={nft.img} alt="" className="h-48 w-48 rounded-lg" />
-              <p>{nft.name}</p>
-            </div>
+            <Link key={nft.id} to={`/nft/${nft.id}`}>
+              <div
+                className="m-2 p-2 rounded-lg flex flex-col justify-around border-solid border-2 h-64 min-w-max"
+              >
+                <img src={nft.img} alt="" className="h-48 w-48 rounded-lg" />
+                <p>{nft.name}</p>
+              </div>
+            </Link>
           );
         } else {
           return null;

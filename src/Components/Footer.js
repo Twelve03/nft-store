@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   TiSocialTwitter,
   TiSocialYoutube,
@@ -14,10 +15,10 @@ const Footer = () => {
         className="h-24 w-26 mt-12"
       />
       <div className="flex flex-col justify-around items-center font-bold -mt-6 w-2/4 h-1/4">
-        <p>Home</p>
-        <p>Explore</p>
-        <p>Contact</p>
-        <p>About</p>
+        <Link to="/">Home</Link>
+        <Link to="/search">Search</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact us</Link>
       </div>
       <div className="flex items-center">
         <input
