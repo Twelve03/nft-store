@@ -7,22 +7,22 @@ const FeaturedNfts = () => {
   );
 
   return (
-    <div className="flex overflow-x-scroll items-center max-h-full max-w-full">
+    <div className="flex overflow-x-scroll items-center h-72 w-full">
       {featuredList.map((nft) => {
-        if (nft.featured) {
-          return (
+        return (
+          nft.featured && (
             <Link key={nft.id} to={`/nft/${nft.id}`}>
-              <div
-                className="m-2 p-2 rounded-lg flex flex-col justify-around border-solid border-2 h-64 min-w-max"
-              >
-                <img src={nft.img} alt="" className="h-48 w-48 rounded-lg" />
+              <div className="m-2 p-2 rounded-lg flex flex-col justify-around border-solid border-2 h-64 min-w-max">
+                <img
+                  src={nft.img}
+                  alt={nft.name}
+                  className="h-48 w-48 rounded-lg"
+                />
                 <p>{nft.name}</p>
               </div>
             </Link>
-          );
-        } else {
-          return null;
-        }
+          )
+        );
       })}
     </div>
   );

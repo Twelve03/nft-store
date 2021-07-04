@@ -16,7 +16,7 @@ const Seller = ({ match }) => {
         .catch((error) => console.log(error));
     };
     getSeller();
-  }, []);
+  }, [match]);
 
   return (
     <div>

@@ -37,7 +37,7 @@ const LiveAuctions = () => {
                 <img className="w-64 h-52 rounded-2xl" src={nft.img} alt="" />
                 <div className="w-60 mt-2">
                   <h1 className="font-medium text-gray-800">{nft.name}</h1>
-                  <p className="font-bold">${nft.bid}</p>
+                  <p className="font-bold">${nft.price}</p>
                 </div>
                 <div className="flex absolute justify-around items-center w-12 bottom-4 right-4 text-lg">
                   <HiOutlineEye />

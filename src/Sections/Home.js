@@ -45,13 +45,13 @@ const Home = () => {
           </button>
         </div>
 
-        <h1 className="mt-16 mb-4 text-2xl w-full font-bold">Featured NFTs</h1>
+        <h1 className="mt-16 mb-3 text-2xl w-full font-bold">Featured NFTs</h1>
         <FeaturedNfts/>
 
         <h1 className="mt-16 mb-4 text-2xl font-bold">Live auctions</h1>
         <LiveAuctions />
 
-        <h1 className="mt-16 mb-4 text-2xl w-full font-bold">We recommend</h1>
+        <h1 className="mt-16 mb-3 text-2xl w-full font-bold">We recommend</h1>
         <FeaturedSellers />
 
         <h1 ref={exploreRef} className="mt-16 mb-4 text-2xl w-full font-bold">

@@ -10,7 +10,9 @@ const FeaturedSellers = () => {
     <div className="flex overflow-x-scroll items-center w-full">
       {featuredSellers.map((seller) => (
         <Link key={seller.id} to={`/seller/${seller.id}`}>
-          <div className="flex items-center p-3 min-w-max m-3 border-2 rounded-3xl">
+          <div
+            className="flex justify-around items-center p-3 min-w-max border-2 m-3 rounded-3xl"
+          >
             <img
               src={seller.avatar}
               alt=""
