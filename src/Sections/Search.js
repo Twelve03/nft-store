@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Search = () => {
@@ -46,13 +47,14 @@ const Search = () => {
             }
           })
           .map((nft) => (
-            <div
-              key={nft.id}
-              style={{ backgroundImage: `url("${nft.img}")` }}
-              className="h-64 w-64 bg-cover bg-center mb-8 rounded-3xl p-6"
-            >
-              <p className="font-bold font-xl">{nft.name}</p>
-            </div>
+            <Link key={nft.id} to={`/nft/${nft.id}`}>
+              <div
+                style={{ backgroundImage: `url("${nft.img}")` }}
+                className="h-64 w-64 bg-cover bg-center mb-8 rounded-3xl p-6"
+              >
+                <p className="font-bold font-xl">{nft.name}</p>
+              </div>
+            </Link>
           ))}
       </div>
     </div>

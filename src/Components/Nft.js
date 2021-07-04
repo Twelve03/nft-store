@@ -19,7 +19,7 @@ const Nft = ({ match }) => {
   }, [match]);
 
   return (
-    <div className="border-2 flex h-screen items-center justify-center ">
+    <div className="flex h-screen items-center justify-center">
       <div className="h-4/5 w-4/5 flex flex-col items-left p-3">
         <p className="text-lg text-gray-300">{nft.category}</p>
         <h1 className="text-3xl font-bold mb-4">{nft.name}</h1>

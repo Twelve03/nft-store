@@ -19,8 +19,37 @@ const Seller = ({ match }) => {
   }, [match]);
 
   return (
-    <div>
-      <h1>{seller.username}</h1>
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="pt-16 flex flex-col items-center min-h-screen w-4/5">
+        <img className="rounded-lg" src={seller.avatar} alt="" />
+        <h1 className="text-xl font-bold text-gray-700">{seller.name}</h1>
+        <p className="text-gray-400">@{seller.username}</p>
+        <div className="mt-10 flex w-full items-center shadow rounded-lg justify-around">
+          <div className="text-center w-1/4 cursor-pointer p-2">
+            {/* // Check if there's a better way to do this */}
+            {seller.created !== undefined && <p>{seller.created.length}</p>}
+            <p>Created</p>
+          </div>
+          <div className="text-center w-1/4 cursor-pointer p-2">
+            <p>{seller.following}</p>
+            <p>Following</p>
+          </div>
+          <div className="text-center w-1/4 cursor-pointer p-2">
+            <p>{seller.followers}</p>
+            <p>Followers</p>
+          </div>
+        </div>
+        <div className="pl-2 w-full mt-10">
+          <h1 className="text-lg font-medium text-gray-600">NFTs Created</h1>
+        </div>
+        {seller.created !== undefined && (
+          <div className="flex flex-wrap justify-around items-center w-full">
+            {seller.created.map((nft) => (
+              <img src={nft} className="m-2 rounded-lg" alt="" />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
