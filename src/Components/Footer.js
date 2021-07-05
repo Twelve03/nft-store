@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import {
   TiSocialTwitter,
   TiSocialYoutube,
@@ -14,12 +14,7 @@ const Footer = () => {
         alt=""
         className="h-24 w-26 mt-12"
       />
-      <div className="flex flex-col justify-around items-center font-bold -mt-6 w-2/4 h-1/4">
-        <Link to="/">Home</Link>
-        <Link to="/search">Search</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact us</Link>
-      </div>
+      <h1 className="font-medium">Follow us!</h1>
       <div className="flex items-center">
         <input
           type="text"
@@ -30,14 +25,14 @@ const Footer = () => {
           SIGN UP
         </button>
       </div>
-      <div className="flex flex-col w-full h-1/4 items-center justify-around border-t border-white">
-        <div className="flex w-full items-center justify-around">
-          <h1 className="font-medium">Follow us</h1>
-          <TiSocialTwitter className="cursor-pointer text-2xl" />
-          <TiSocialYoutube className="cursor-pointer text-2xl" />
-          <TiSocialFacebookCircular className="cursor-pointer text-2xl" />
-          <TiSocialInstagram className="cursor-pointer text-2xl" />
-        </div>
+      <div className="flex w-full items-center justify-around">
+        <TiSocialTwitter className="cursor-pointer text-2xl" />
+        <TiSocialYoutube className="cursor-pointer text-2xl" />
+        <TiSocialFacebookCircular className="cursor-pointer text-2xl" />
+        <TiSocialInstagram className="cursor-pointer text-2xl" />
+      </div>
+
+      <div className="flex flex-col w-full h-24 items-center justify-around border-t border-white">
         <p>© NFThis, Inc. All rights reserved.</p>
       </div>
     </footer>

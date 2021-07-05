@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import FeaturedNfts from "../Components/FeaturedNfts";
-import LiveAuctions from "../Components/LiveAuctions";
-import FeaturedSellers from "../Components/FeaturedSellers";
-import Explore from "../Components/Explore";
+import FeaturedNfts from "../Components/HomeComponents/FeaturedNfts";
+import LiveAuctions from "../Components/HomeComponents/LiveAuctions";
+import FeaturedSellers from "../Components/HomeComponents/FeaturedSellers";
+import Explore from "../Components/HomeComponents/Explore";
 import Footer from "../Components/Footer";
 
 const Home = () => {

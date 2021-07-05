@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-import { AiFillHome, AiOutlineSearch, AiFillInfoCircle } from "react-icons/ai";
+import {
+  AiFillHome,
+  AiOutlineSearch,
+  AiFillInfoCircle,
+} from "react-icons/ai";
 
 const NavLinks = ({ closeMenu }) => {
   return (
@@ -11,6 +15,7 @@ const NavLinks = ({ closeMenu }) => {
       >
         Home <AiFillHome className="ml-2 " />
       </Link>
+    
       <Link
         to="/search"
         onClick={closeMenu}
@@ -18,6 +23,7 @@ const NavLinks = ({ closeMenu }) => {
       >
         Search <AiOutlineSearch className="ml-2" />
       </Link>
+
       <Link
         to="/about"
         onClick={closeMenu}
@@ -25,6 +31,7 @@ const NavLinks = ({ closeMenu }) => {
       >
         About <AiFillInfoCircle className="ml-2" />
       </Link>
+
       <Link
         to="/contact"
         onClick={closeMenu}

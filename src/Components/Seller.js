@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Seller = ({ match }) => {
@@ -22,7 +23,9 @@ const Seller = ({ match }) => {
     <div className="flex min-h-screen items-center justify-center">
       <div className="pt-16 flex flex-col items-center min-h-screen w-4/5">
         <img className="rounded-lg" src={seller.avatar} alt="" />
-        <h1 className="text-xl font-bold text-gray-700">{seller.name}</h1>
+        <h1 className="text-xl font-bold text-gray-700">
+          {seller.name + " " + seller.lastname}
+        </h1>
         <p className="text-gray-400">@{seller.username}</p>
         <div className="mt-10 flex w-full items-center shadow rounded-lg justify-around">
           <div className="text-center w-1/4 cursor-pointer p-2">
@@ -45,7 +48,9 @@ const Seller = ({ match }) => {
         {seller.created !== undefined && (
           <div className="flex flex-wrap justify-around items-center w-full">
             {seller.created.map((nft) => (
-              <img src={nft} className="m-2 rounded-lg" alt="" />
+              <Link key={nft.id} to={`/nft/${nft.id}`}>
+                <img src={nft.img} className="m-2 rounded-lg h-56 w-64" alt="" />
+              </Link>
             ))}
           </div>
         )}

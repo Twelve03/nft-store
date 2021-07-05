@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import useAxios from "./useAxios";
+import useAxios from "../useAxios";
 
 const FeaturedNfts = () => {
   let featuredList = useAxios(

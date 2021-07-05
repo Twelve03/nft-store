@@ -23,9 +23,7 @@ const Nft = ({ match }) => {
       <div className="h-4/5 w-4/5 flex flex-col items-left p-3">
         <p className="text-lg text-gray-300">{nft.category}</p>
         <h1 className="text-3xl font-bold mb-4">{nft.name}</h1>
-        <p className="mb-4 text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
-        </p>
+        <p className="mb-4 text-gray-600">{nft.description}</p>
         <div
           className="mb-8 bg-cover bg-center h-72 w-full rounded-lg"
           style={{ backgroundImage: `url("${nft.img}")` }}

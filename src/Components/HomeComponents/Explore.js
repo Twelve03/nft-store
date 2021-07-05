@@ -60,16 +60,16 @@ const Explore = () => {
           <Link key={nft.id} to={`/nft/${nft.id}`}>
             <div
               key={nft.id}
-              className="relative flex flex-col justify-evenly items-center h-72 m-2 w-64"
+              className="relative flex flex-col justify-evenly items-center h-80 m-2 w-72"
             >
               <img
                 src={nft.img}
-                className="absolute border-t-2 top-0 z-10 rounded-2xl w-48 h-48"
+                className="absolute border-t-2 top-0 z-10 rounded-2xl w-64 h-56"
                 alt=""
               />
-              <div className="pb-5 flex flex-col items-center justify-end absolute bottom-0 z-1 h-56 rounded-lg shadow-lg border-t-2 w-64">
+              <div className="pb-3 flex flex-col items-center justify-end absolute bottom-5 z-1 h-56 rounded-lg shadow-lg border-t-2 w-72">
                 <p>{nft.name}</p>
-                <p>{nft.price}</p>
+                <p className="font-bold">${nft.price}</p>
               </div>
             </div>
           </Link>
