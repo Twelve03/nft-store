@@ -67,7 +67,7 @@ const Explore = () => {
                 className="absolute border-t-2 top-0 z-10 rounded-2xl w-64 h-56"
                 alt=""
               />
-              <div className="pb-3 flex flex-col items-center justify-end absolute bottom-5 z-1 h-56 rounded-lg shadow-lg border-t-2 w-72">
+              <div className="pb-3 bg-white bg-opacity-50 flex flex-col items-center justify-end absolute bottom-5 z-1 h-56 rounded-lg shadow-lg border-t-2 w-72">
                 <p>{nft.name}</p>
                 <p className="font-bold">${nft.price}</p>
               </div>

@@ -22,12 +22,12 @@ const Seller = ({ match }) => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="pt-16 flex flex-col items-center min-h-screen w-4/5">
-        <img className="rounded-lg" src={seller.avatar} alt="" />
+        <img className="rounded-lg mb-2" src={seller.avatar} alt="" />
         <h1 className="text-xl font-bold text-gray-700">
-          {seller.name + " " + seller.lastname}
+          {`${seller.name} ${seller.lastname}`}
         </h1>
         <p className="text-gray-400">@{seller.username}</p>
-        <div className="mt-10 flex w-full items-center shadow rounded-lg justify-around">
+        <div className="mt-10 flex bg-white w-full items-center shadow rounded-lg justify-around">
           <div className="text-center w-1/4 cursor-pointer p-2">
             {/* // Check if there's a better way to do this */}
             {seller.created !== undefined && <p>{seller.created.length}</p>}

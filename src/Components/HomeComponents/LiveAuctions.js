@@ -33,7 +33,7 @@ const LiveAuctions = () => {
         <div key={nft.id}>
           {index === current && (
             <Link to={`/nft/${nft.id}`}>
-              <div className="relative flex flex-col items-center justify-center w-72 h-72 border-2 rounded-2xl shadow-lg">
+              <div className="relative flex bg-white bg-opacity-70 flex-col items-center justify-center w-72 h-72 rounded-2xl shadow-lg">
                 <img className="w-64 h-52 rounded-2xl" src={nft.img} alt="" />
                 <div className="w-60 mt-2">
                   <h1 className="font-medium text-gray-800">{nft.name}</h1>

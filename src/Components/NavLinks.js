@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import {
   AiFillHome,
   AiOutlineSearch,
-  AiFillInfoCircle,
 } from "react-icons/ai";
 
 const NavLinks = ({ closeMenu }) => {
@@ -29,7 +28,7 @@ const NavLinks = ({ closeMenu }) => {
         onClick={closeMenu}
         className="flex items-center text-blue-500 py-3 border-t border-b block"
       >
-        About <AiFillInfoCircle className="ml-2" />
+        About
       </Link>
 
       <Link
