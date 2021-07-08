@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Home from "./Sections/Home";
 import Search from "./Sections/Search";
+import Login from "./Sections/Login";
+import Signup from "./Sections/Signup";
 import About from "./Sections/About";
 import Contact from "./Sections/Contact";
 import Nft from "./Components/Nft";
@@ -12,7 +14,12 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="m-0 p-0 border-box bg-center bg-cover bg-fixed" style={{backgroundImage: `url("https://images.pexels.com/photos/7130469/pexels-photo-7130469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`}}>
+      <div
+        className="m-0 p-0 border-box bg-center bg-cover bg-fixed"
+        style={{
+          backgroundImage: `url("https://images.pexels.com/photos/7130469/pexels-photo-7130469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`,
+        }}
+      >
         <Header />
 
         <Switch>
@@ -22,6 +29,8 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/nft/:id" component={Nft} />
           <Route path="/seller/:id" component={Seller} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
         </Switch>
       </div>
     </Router>

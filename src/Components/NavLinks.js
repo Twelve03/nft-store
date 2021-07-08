@@ -38,6 +38,20 @@ const NavLinks = ({ closeMenu }) => {
       >
         Contact us
       </Link>
+      <Link
+        to="/login"
+        onClick={closeMenu}
+        className="flex items-center text-blue-500 py-3 border-t border-b block"
+      >
+        Log in
+      </Link>
+      <Link
+        to="/signup"
+        onClick={closeMenu}
+        className="flex items-center text-blue-500 py-3 border-t border-b block"
+      >
+        Sign up
+      </Link>
     </ul>
   );
 };

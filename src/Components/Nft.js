@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { BsBoxArrowInLeft } from "react-icons/bs";
 import axios from "axios";
 
 const Nft = ({ match }) => {
   const [nft, setNft] = useState({});
-
-  let history = useHistory();
 
   useEffect(() => {
     const getNft = async () => {
@@ -24,13 +20,6 @@ const Nft = ({ match }) => {
 
   return (
     <div className="flex flex-col h-screen items-center justify-center">
-      <div className="pl-12 w-full">
-        <BsBoxArrowInLeft
-          onClick={() => history.goBack()}
-          className="ml-1 cursor-pointer text-3xl"
-        />
-      </div>
-
       <div className="h-4/5 w-4/5 flex flex-col items-left p-3">
         <p className="text-lg text-gray-300">{nft.category}</p>
         <h1 className="text-3xl font-bold mb-4">{nft.name}</h1>
