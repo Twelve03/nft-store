@@ -12,11 +12,11 @@ const Home = () => {
   return (
     <div>
       {/* Landing Page */}
-      <div className="p-2 flex justify-between flex-col items-left h-screen w-full bg-black bg-cover bg-center">
+      <div className="p-2 flex justify-between sm:justify-around flex-col items-left h-screen w-full bg-black bg-cover bg-center">
         <img
-          src="https://i.pinimg.com/originals/9d/43/da/9d43da092565f9f5003c3aaa64292902.gif"
+          src="https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711&dl=1"
           alt=""
-          className="h-2/4 pt-20"
+          className="h-2/4 pt-10 w-full md:self-center md:w-3/4"
         />
         <p className="text-gray-400 pl-6 -mb-7">NFT Marketplace</p>
         <h1 className="font-delagothicone text-white pl-6 text-3xl">
@@ -26,7 +26,7 @@ const Home = () => {
 
         <button
           onClick={executeScroll}
-          className="mb-7 ml-6 w-32 h-12 bg-transparent text-gray-200 font-bold border rounded-lg "
+          className="mb-7 ml-6 w-32 sm:w-1/4 md:w-1/6 h-12 bg-transparent text-gray-200 font-bold border rounded-lg "
         >
           Explore
         </button>
@@ -46,7 +46,7 @@ const Home = () => {
         </div>
 
         <h1 className="mt-16 mb-3 text-2xl w-full font-bold">Featured NFTs</h1>
-        <FeaturedNfts/>
+        <FeaturedNfts />
 
         <h1 className="mt-16 mb-4 text-2xl font-bold">Live auctions</h1>
         <LiveAuctions />

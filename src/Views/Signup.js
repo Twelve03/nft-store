@@ -3,18 +3,18 @@ import { AiOutlineGoogle, AiFillApple, AiOutlineTwitter } from "react-icons/ai";
 
 const Signup = () => {
   return (
-    <div className="h-screen flex items-center justify-center">
-      <form className="-mt-4 h-4/5 w-4/5 flex flex-col items-left">
+    <div className="min-h-screen flex items-left justify-center ">
+      <form className="mt-12 pb-2 h-full w-4/5 flex flex-col items-left ">
         <p className="text-3xl font-bold mb-10">Sign up</p>
         <p className="mb-4">Sign up with one of the following options.</p>
         <div className="mb-7 flex text-xl items-center justify-around">
-          <div className="flex items-center justify-center w-24 h-12 border-black border-2 rounded-lg">
+          <div className="flex items-center justify-center w-24 h-12 sm:w-32 border-black border-2 rounded-lg">
             <AiOutlineGoogle />
           </div>
-          <div className="flex items-center justify-center w-24 h-12 border-black border-2 rounded-lg">
+          <div className="flex items-center justify-center w-24 h-12 sm:w-32 border-black border-2 rounded-lg">
             <AiOutlineTwitter />
           </div>
-          <div className="flex items-center justify-center w-24 h-12 border-black border-2 rounded-lg">
+          <div className="flex items-center justify-center w-24 h-12 sm:w-32 border-black border-2 rounded-lg">
             <AiFillApple />
           </div>
         </div>

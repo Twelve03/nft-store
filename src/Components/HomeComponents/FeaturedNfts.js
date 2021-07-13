@@ -12,7 +12,7 @@ const FeaturedNfts = () => {
         return (
           nft.featured && (
             <Link key={nft.id} to={`/nft/${nft.id}`}>
-              <div className="m-2 p-2 bg-white bg-opacity-50 border-t-2 border-l-2 border-white rounded-lg flex flex-col justify-around h-64 min-w-max">
+              <div className="m-2 p-2 bg-white bg-opacity-70 rounded-lg flex flex-col justify-around h-64 min-w-max">
                 <img
                   src={nft.img}
                   alt={nft.name}

@@ -19,29 +19,35 @@ const Nft = ({ match }) => {
   }, [match]);
 
   return (
-    <div className="flex flex-col h-screen items-center justify-center">
-      <div className="h-4/5 w-4/5 flex flex-col items-left p-3">
-        <p className="text-lg text-gray-300">{nft.category}</p>
-        <h1 className="text-3xl font-bold mb-4">{nft.name}</h1>
-        <div
-          className="relative mb-4 bg-cover bg-center h-full w-full rounded-lg"
-          style={{ backgroundImage: `url("${nft.img}")` }}
-        >
-          <div className="absolute bottom-0 p-3 w-3/4 flex text-white items-center">
-            <img
-              src="https://imgprd19.hobbylobby.com/5/2e/27/52e275124d45cee86d1d881315801cb61fddae13/700Wx700H-1751700-0219.jpg"
-              className="mr-2 h-10 w-10 rounded-full"
-              alt="creator-name"
-            />
-            <p>Creator's name</p>
-          </div>
+    <div className="flex flex-col min-h-screen items-center justify-center">
+      <div className="mt-8 min-h-screen w-full flex flex-col items-left p-4">
+        <p className="text-lg text-gray-400">{nft.category}</p>
+        <h1 className="text-3xl font-bold mb-4 md:self-center">{nft.name}</h1>
+        <img
+          className="mb-4 self-center h-5/6 w-5/6 md:h-2/4 md:w-2/4 rounded-lg"
+          src={nft.img}
+          alt={nft.name}
+        />
+        <p className="font-medium text-gray-800 mt-4">Creator:</p>
+        <div className="mb-4 p-3 w-3/4 flex text-white items-center">
+          <img
+            src={nft.avatar}
+            className="mr-2 h-10 w-10 rounded-full"
+            alt="creator-name"
+          />
+          <p className="text-lg text-black font-medium">@{nft.creator}</p>
         </div>
         <p className="mb-6 text-gray-600">{nft.description}</p>
-        <div className="h-12 w-full flex items-center rounded-lg">
-          <button style={{backgroundColor :"#6df238"}} className="mr-3 w-48 h-12 text-white font-bold rounded-full">
+        <div className="h-12 w-full flex items-center rounded-lg md:justify-center md:mt-8">
+          <button
+            style={{ backgroundColor: "#6df238" }}
+            className="mr-3 w-48 h-12 text-white font-bold rounded-full"
+          >
             Buy for ${nft.price}
           </button>
-          <button className="w-48 h-12 border-2 border-black font-bold rounded-full">
+          <button
+            className="w-48 h-12 border-2 border-black font-bold rounded-full"
+          >
             Place a bid
           </button>
         </div>

@@ -8,14 +8,14 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center justify-between h-screen bg-gray-200 border-2">
+    <footer className="flex flex-col items-center justify-between bg-gray-200 border-2">
       <img
         src="https://i.ibb.co/djPF91c/nfthis-logo.png"
         alt=""
         className="h-24 w-26 mt-12"
       />
-      <h1 className="font-medium">Follow us!</h1>
-      <div className="flex items-center">
+      <h1 className="font-medium mt-10">Follow us!</h1>
+      <div className="mt-10 flex items-center">
         <input
           type="text"
           placeholder="Email Address"
@@ -25,14 +25,14 @@ const Footer = () => {
           SIGN UP
         </button>
       </div>
-      <div className="flex w-full items-center justify-around">
+      <div className="mt-16 flex w-full items-center justify-around">
         <TiSocialTwitter className="cursor-pointer text-2xl" />
         <TiSocialYoutube className="cursor-pointer text-2xl" />
         <TiSocialFacebookCircular className="cursor-pointer text-2xl" />
         <TiSocialInstagram className="cursor-pointer text-2xl" />
       </div>
 
-      <div className="flex flex-col w-full h-24 items-center justify-around border-t border-white">
+      <div className="mt-16 flex flex-col w-full h-24 items-center justify-around border-t border-white">
         <p>© NFThis, Inc. All rights reserved.</p>
       </div>
     </footer>

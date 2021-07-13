@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  AiFillHome,
-  AiOutlineSearch,
-} from "react-icons/ai";
+import { AiFillHome, AiOutlineSearch } from "react-icons/ai";
 
 const NavLinks = ({ closeMenu }) => {
   return (
@@ -14,7 +11,7 @@ const NavLinks = ({ closeMenu }) => {
       >
         Home <AiFillHome className="ml-2 " />
       </Link>
-    
+
       <Link
         to="/search"
         onClick={closeMenu}
@@ -32,19 +29,13 @@ const NavLinks = ({ closeMenu }) => {
       </Link>
 
       <Link
-        to="/contact"
-        onClick={closeMenu}
-        className="flex items-center text-blue-500 py-3 border-t border-b block"
-      >
-        Contact us
-      </Link>
-      <Link
         to="/login"
         onClick={closeMenu}
         className="flex items-center text-blue-500 py-3 border-t border-b block"
       >
         Log in
       </Link>
+      
       <Link
         to="/signup"
         onClick={closeMenu}

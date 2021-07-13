@@ -49,7 +49,7 @@ const Seller = ({ match }) => {
           <div className="flex flex-wrap justify-around items-center w-full">
             {seller.created.map((nft) => (
               <Link key={nft.id} to={`/nft/${nft.id}`}>
-                <img src={nft.img} className="m-2 rounded-lg h-56 w-64" alt="" />
+                <img src={nft.img} className="m-2 rounded-lg h-64 w-64" alt="" />
               </Link>
             ))}
           </div>

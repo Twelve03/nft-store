@@ -1,11 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
-import Home from "./Sections/Home";
-import Search from "./Sections/Search";
-import Login from "./Sections/Login";
-import Signup from "./Sections/Signup";
-import About from "./Sections/About";
-import Contact from "./Sections/Contact";
+import Home from "./Views/Home";
+import Search from "./Views/Search";
+import Login from "./Views/Login";
+import Signup from "./Views/Signup";
+import About from "./Views/About";
 import Nft from "./Components/Nft";
 import Seller from "./Components/Seller";
 import ScrollToTop from "./Components/ScrollToTop";
@@ -26,7 +25,6 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/search" exact component={Search} />
           <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
           <Route path="/nft/:id" component={Nft} />
           <Route path="/seller/:id" component={Seller} />
           <Route path="/login" component={Login} />
