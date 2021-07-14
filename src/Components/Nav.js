@@ -45,7 +45,7 @@ const Nav = () => {
       )}
 
       <BiMenuAltLeft
-        className="text-2xl z-10 w-10"
+        className="text-2xl z-10 w-10 cursor-pointer"
         onClick={() => setShowMenu(!showMenu)}
       />
     </nav>

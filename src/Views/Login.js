@@ -8,13 +8,13 @@ const Login = () => {
         <p className="text-3xl font-bold mb-10">Log in</p>
         <p className="mb-4">Log in with one of the following options.</p>
         <div className="mb-7 flex text-xl items-center justify-around">
-          <div className="flex items-center justify-center w-24 h-12 border-black border-2 rounded-lg">
+          <div className="flex items-center cursor-pointer justify-center w-24 h-12 sm:w-32 border-black border-2 rounded-lg">
             <AiOutlineGoogle />
           </div>
-          <div className="flex items-center justify-center w-24 h-12 border-black border-2 rounded-lg">
+          <div className="flex items-center cursor-pointer justify-center w-24 h-12 sm:w-32 border-black border-2 rounded-lg">
             <AiOutlineTwitter />
           </div>
-          <div className="flex items-center justify-center w-24 h-12 border-black border-2 rounded-lg">
+          <div className="flex items-center cursor-pointer justify-center w-24 h-12 sm:w-32 border-black border-2 rounded-lg">
             <AiFillApple />
           </div>
         </div>
