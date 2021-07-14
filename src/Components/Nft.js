@@ -41,13 +41,11 @@ const Nft = ({ match }) => {
         <div className="h-12 w-full flex items-center rounded-lg md:justify-center md:mt-8">
           <button
             style={{ backgroundColor: "#6df238" }}
-            className="mr-3 w-48 h-12 text-white font-bold rounded-full"
+            className="mr-3 w-48 h-12 text-white font-bold rounded-full md:mr-8"
           >
             Buy for ${nft.price}
           </button>
-          <button
-            className="w-48 h-12 border-2 border-black font-bold rounded-full"
-          >
+          <button className="w-48 h-12 border-2 border-black font-bold rounded-full">
             Place a bid
           </button>
         </div>

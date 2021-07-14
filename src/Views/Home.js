@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import FeaturedNfts from "../Components/HomeComponents/FeaturedNfts";
 import LiveAuctions from "../Components/HomeComponents/LiveAuctions";
 import FeaturedSellers from "../Components/HomeComponents/FeaturedSellers";
@@ -23,7 +24,6 @@ const Home = () => {
           NFThis
           <br />━ For those with creative minds.
         </h1>
-
         <button
           onClick={executeScroll}
           className="mb-7 ml-6 w-32 sm:w-1/4 md:w-1/6 h-12 bg-transparent text-gray-200 font-bold border rounded-lg "
@@ -34,16 +34,19 @@ const Home = () => {
 
       {/* Top NFT */}
       <div className="p-3 flex flex-col items-center">
-        <div className="relative mt-20 w-72 h-32 rounded-lg border-solid border-2">
-          <img
-            src="https://live-production.wcms.abc-cdn.net.au/cbe346eee79d3e08dee5e8eb04284438?impolicy=wcms_crop_resize&cropH=1680&cropW=2983&xPos=17&yPos=574&width=862&height=485"
-            alt=""
-            className="w-full h-full rounded-lg"
-          />
-          <button className="absolute bottom-2 right-2 text-xs h-5 w-12 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full">
-            Buy
-          </button>
-        </div>
+        <Link to={"/nft/17"}>
+          <div
+            style={{
+              backgroundImage: 'url("https://i.imgur.com/5rrOZOJ.gif")',
+            }}
+            className="relative bg-cover bg-center mt-20 w-72 h-32 rounded-lg shadow-lg"
+          >
+            <p className="p-3 font-delagothicone text-white text-sm">Top NFT of the week!</p>
+            <button className="absolute bottom-2 right-2 text-xs h-5 w-12 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full">
+              Buy
+            </button>
+          </div>
+        </Link>
 
         <h1 className="mt-16 mb-3 text-2xl w-full font-bold">Featured NFTs</h1>
         <FeaturedNfts />

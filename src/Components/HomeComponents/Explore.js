@@ -75,7 +75,7 @@ const Explore = () => {
           </Link>
         ))}
 
-        {nfts.length >= 5 && (
+        {nfts.length > 5 && (
           <button
             className="my-5 p-2 w-full border-2 border-black hover:bg-black hover:text-white font-bold rounded-lg"
             onClick={() => setNumOfElem((prev) => prev + 5)}
