@@ -11,7 +11,7 @@ const FeaturedSellers = () => {
       {featuredSellers.map((seller) => (
         <Link key={seller.id} to={`/seller/${seller.id}`}>
           <div
-            className="flex justify-around bg-white bg-opacity-70 items-center p-3 min-w-max m-3 rounded-3xl"
+            className="flex justify-around bg-white bg-opacity-70 items-center p-3 min-w-max m-3 rounded-3xl transform transition duration-500 hover:scale-110"
           >
             <img
               src={seller.avatar}
@@ -19,8 +19,8 @@ const FeaturedSellers = () => {
               className="w-16 h-16 rounded-2xl mr-4"
             />
             <div>
-              <p>User:</p>
-              <p className="mr-4">{seller.username}</p>
+              <p>Seller:</p>
+              <p className="mr-4 font-bold">{seller.username}</p>
             </div>
           </div>
         </Link>

@@ -27,7 +27,7 @@ const Search = () => {
       />
       <input
         type="text"
-        className="mt-10 p-1 pl-3 rounded-md w-2/4"
+        className="mt-10 p-1 pl-3 rounded-md w-2/4 focus:shadow-blue"
         placeholder="Search for NFT name"
         onChange={(e) => {
           setSearchTerm(e.target.value);

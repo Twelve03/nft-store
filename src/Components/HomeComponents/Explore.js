@@ -35,7 +35,7 @@ const Explore = () => {
     >
       <div className="flex items-center justify-between h-20 w-full">
         <button
-          className="shadow hover:bg-black hover:text-white w-10"
+          className="w-10 hover:bg-black hover:text-white transition duration-300 ease-in-out shadow"
           onClick={getNfts}
         >
           All
@@ -64,7 +64,7 @@ const Explore = () => {
             >
               <img
                 src={nft.img}
-                className="absolute border-t-2 top-0 z-10 rounded-2xl w-64 h-56"
+                className="absolute border-t-2 top-0 z-10 rounded-2xl w-64 h-56 hover:shadow-blue transition duration-300 ease-in-out"
                 alt=""
               />
               <div className="pb-3 bg-white bg-opacity-70 flex flex-col items-center justify-end absolute bottom-5 z-1 h-56 rounded-lg shadow-lg border-t-2 w-72">
@@ -77,7 +77,7 @@ const Explore = () => {
 
         {nfts.length > 5 && (
           <button
-            className="my-5 p-2 w-full border-2 border-black hover:bg-black hover:text-white font-bold rounded-lg"
+            className="my-5 p-2 w-full border-2 border-black hover:bg-black hover:text-white transition duration-300 ease-in-out font-bold rounded-lg"
             onClick={() => setNumOfElem((prev) => prev + 5)}
           >
             Load more

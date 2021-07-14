@@ -14,7 +14,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <div
-        className="m-0 p-0 border-box bg-center bg-cover bg-fixed"
+        className="font-poppins m-0 p-0 border-box bg-center bg-cover bg-fixed"
         style={{
           backgroundImage: `url("https://images.pexels.com/photos/7130469/pexels-photo-7130469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")`,
         }}

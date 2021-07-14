@@ -28,14 +28,14 @@ const Nft = ({ match }) => {
           src={nft.img}
           alt={nft.name}
         />
-        <p className="font-medium text-gray-800 mt-4">Creator:</p>
+        <p className="font-bold text-gray-800 mt-4">Creator:</p>
         <div className="mb-4 p-3 w-3/4 flex text-white items-center">
           <img
             src={nft.avatar}
             className="mr-2 h-10 w-10 rounded-full"
             alt="creator-name"
           />
-          <p className="text-lg text-black font-medium">@{nft.creator}</p>
+          <p className="text-lg text-black font-bold">@{nft.creator}</p>
         </div>
         <p className="mb-6 text-gray-600">{nft.description}</p>
         <div className="h-12 w-full flex items-center rounded-lg md:justify-center md:mt-8">

@@ -3,7 +3,7 @@ import { AiFillCaretDown } from "react-icons/ai";
 const SortMenu = ({ nfts, setShowSort, showSort }) => {
   return (
     <div
-      className="flex flex-col items-center border-2 border-black font-medium rounded-lg w-1/4 sm:w-24 text-center"
+      className="flex flex-col items-center border-2 border-black font-medium cursor-pointer rounded-lg w-1/4 sm:w-24 text-center hover:bg-black hover:text-white transition duration-300 ease-in-out"
       onClick={() => setShowSort(!showSort)}
     >
       <div className="flex items-center justify-around w-full">

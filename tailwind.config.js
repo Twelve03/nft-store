@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         delagothicone: ["Dela Gothic One"],
+        poppins: ["Poppins"],
       },
       keyframes: {
         "fade-in": {
@@ -20,6 +21,7 @@ module.exports = {
         "fade-in": "fade-in 0.5s ease-out",
       },
     },
+    boxShadow: { blue: "0 0 5px rgba(81, 203, 238, 1)" },
   },
   variants: {
     extend: {},

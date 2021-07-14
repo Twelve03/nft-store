@@ -1,8 +1,8 @@
 const About = () => {
   return (
     <div className="min-h-screen">
-      <div className="p-8 h-screen mt-8 ">
-        <h1 className="text-3xl mb-4">What is an NFT?</h1>
+      <div className="p-8 h-screen">
+        <h1 className="text-3xl mb-4 mt-6">What is an NFT?</h1>
         <div className="flex text-gray-600 flex-col justify-between">
           <p>
             NFT stands for non-fungible tokens like ERC-721 (a smart contract
@@ -47,8 +47,8 @@ const About = () => {
         </div>
       </div>
       <div className="h-screen">
-        <div className="p-8 h-screen mt-10 ">
-          <h1 className="text-2xl mb-4">Why do NFTs have value?</h1>
+        <div className="p-8 h-screen">
+          <h1 className="text-2xl mb-4 mt-6">Why do NFTs have value?</h1>
           <div className="flex text-gray-600 flex-col justify-between">
             <p>
               As we’ve mentioned already, a non-fungible token is essentially a

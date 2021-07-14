@@ -26,7 +26,7 @@ const Home = () => {
         </h1>
         <button
           onClick={executeScroll}
-          className="mb-7 ml-6 w-32 sm:w-1/4 md:w-1/6 h-12 bg-transparent text-gray-200 font-bold border rounded-lg "
+          className="mb-7 ml-6 w-32 sm:w-1/4 md:w-1/6 h-12 bg-transparent text-gray-200 font-bold border rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out"
         >
           Explore
         </button>
@@ -48,16 +48,16 @@ const Home = () => {
           </div>
         </Link>
 
-        <h1 className="mt-16 mb-3 text-2xl w-full font-bold">Featured NFTs</h1>
+        <h1 className="font-delagothicone mt-16 mb-3 text-2xl w-full">Featured NFTs</h1>
         <FeaturedNfts />
 
-        <h1 className="mt-16 mb-4 text-2xl font-bold">Live auctions</h1>
+        <h1 className="font-delagothicone mt-16 mb-4 text-2xl">Live auctions</h1>
         <LiveAuctions />
 
-        <h1 className="mt-16 mb-3 text-2xl w-full font-bold">We recommend</h1>
+        <h1 className="font-delagothicone mt-16 mb-3 text-2xl w-full">We recommend</h1>
         <FeaturedSellers />
 
-        <h1 ref={exploreRef} className="mt-16 mb-4 text-2xl w-full font-bold">
+        <h1 ref={exploreRef} className="font-delagothicone mt-16 mb-4 text-2xl w-full">
           Explore
         </h1>
         <Explore />
