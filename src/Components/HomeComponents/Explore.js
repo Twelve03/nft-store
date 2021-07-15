@@ -44,7 +44,7 @@ const Explore = () => {
           {categories.map((category) => (
             <p
               key={categories.indexOf(category)}
-              className="mr-2 cursor-pointer w-24 font-medium"
+              className="mr-2 cursor-pointer w-24 font-bold text-gray-800 text-sm"
               onClick={() =>
                 setNfts(nfts.filter((nft) => nft.category === category))
               }
@@ -64,7 +64,7 @@ const Explore = () => {
             >
               <img
                 src={nft.img}
-                className="absolute border-t-2 top-0 z-10 rounded-2xl w-64 h-56 hover:shadow-blue transition duration-300 ease-in-out"
+                className="absolute top-0 z-10 rounded-2xl w-64 h-56 hover:shadow-blue transition duration-300 ease-in-out"
                 alt=""
               />
               <div className="pb-3 bg-white bg-opacity-70 flex flex-col items-center justify-end absolute bottom-5 z-1 h-56 rounded-lg shadow-lg border-t-2 w-72">

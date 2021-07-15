@@ -36,7 +36,7 @@ const Nav = () => {
           item && (
             <animated.div
               style={styles}
-              className="fixed rounded-r-lg bg-white top-0 left-0 w-2/4 h-full z-50 shadow p-3"
+              className="fixed rounded-r-lg bg-white top-0 left-0 w-48 h-full z-50 shadow p-3"
               onClick={() => setShowMenu(false)}
             >
               <NavLinks closeMenu={() => setShowMenu(false)} />
@@ -45,7 +45,8 @@ const Nav = () => {
       )}
 
       <BiMenuAltLeft
-        className="text-2xl z-10 w-10 cursor-pointer"
+        className="text-3xl z-10 w-10 cursor-pointer"
+        style={{ color: "#1F51FF" }}
         onClick={() => setShowMenu(!showMenu)}
       />
     </nav>

@@ -4,6 +4,7 @@ import axios from "axios";
 
 const Seller = ({ match }) => {
   const [seller, setSeller] = useState({});
+  const [nftsCreated, setNftsCreated] = useState([]);
 
   useEffect(() => {
     const getSeller = async () => {
@@ -13,6 +14,7 @@ const Seller = ({ match }) => {
         )
         .then((res) => {
           setSeller(res.data);
+          setNftsCreated(res.data.created);
         })
         .catch((error) => console.log(error));
     };
@@ -28,9 +30,11 @@ const Seller = ({ match }) => {
         </h1>
         <p className="text-gray-400">@{seller.username}</p>
         <div className="mt-10 flex items-center shadow rounded-lg justify-around">
-          <div className="text-center text-white w-28 bg-blue-500 shadow cursor-pointer p-2 rounded-l-lg">
-            {/* // Check if there's a better way to do this */}
-            {seller.created !== undefined && <p className="font-medium">{seller.created.length}</p>}
+          <div
+            style={{ backgroundColor: "#1F51FF" }}
+            className="text-center text-white w-28 shadow cursor-pointer p-2 rounded-l-lg"
+          >
+            <p className="font-medium">{nftsCreated.length}</p>
             <p className="font-medium">Created</p>
           </div>
           <div className="text-center w-28 bg-white cursor-pointer border-r-2 p-2">
@@ -45,19 +49,13 @@ const Seller = ({ match }) => {
         <div className="pl-2 w-full mt-10">
           <h1 className="text-lg font-medium text-gray-600">NFTs Created</h1>
         </div>
-        {seller.created !== undefined && (
-          <div className="flex flex-wrap justify-around items-center w-full">
-            {seller.created.map((nft) => (
-              <Link key={nft.id} to={`/nft/${nft.id}`}>
-                <img
-                  src={nft.img}
-                  className="m-2 rounded-lg h-64 w-64"
-                  alt=""
-                />
-              </Link>
-            ))}
-          </div>
-        )}
+        <div className="flex flex-wrap justify-around items-center w-full">
+          {nftsCreated.map((nft) => (
+            <Link key={nft.id} to={`/nft/${nft.id}`}>
+              <img src={nft.img} className="m-2 rounded-lg h-64 w-64" alt="" />
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

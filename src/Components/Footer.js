@@ -31,7 +31,7 @@ const Footer = () => {
         />
         <input
           type="submit"
-          className="h-8 text-xs p-2 text-white bg-blue-500"
+          className="h-8 text-xs p-2 text-white bg-blue-600"
           value="Sign Up!"
         ></input>
       </form>

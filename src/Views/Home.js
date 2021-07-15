@@ -42,7 +42,7 @@ const Home = () => {
             className="relative bg-cover bg-center mt-20 w-72 h-32 rounded-lg shadow-lg"
           >
             <p className="p-3 font-delagothicone text-white text-sm">Top NFT of the week!</p>
-            <button className="absolute bottom-2 right-2 text-xs h-5 w-12 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full">
+            <button style={{ backgroundColor: "#1F51FF" }} className="absolute bottom-2 right-2 text-xs h-5 w-12 text-white font-bold rounded-full">
               Buy
             </button>
           </div>
