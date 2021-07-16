@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { useTransition, animated } from "react-spring";
-import NavLinks from "./NavLinks";
+import NavLinks from "./MobileNavLinks";
 
-const Nav = () => {
+const MobileNav = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   // Animations
@@ -45,7 +45,7 @@ const Nav = () => {
       )}
 
       <BiMenuAltLeft
-        className="text-3xl z-10 w-10 cursor-pointer"
+        className="md:hidden text-3xl z-10 w-10 cursor-pointer"
         style={{ color: "#1F51FF" }}
         onClick={() => setShowMenu(!showMenu)}
       />
@@ -53,4 +53,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default MobileNav;

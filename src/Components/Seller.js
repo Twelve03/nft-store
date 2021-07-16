@@ -1,10 +1,16 @@
 import { useState, useEffect } from "react";
+import Followers from "./Followers";
+import Following from "./Following";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Seller = ({ match }) => {
   const [seller, setSeller] = useState({});
   const [nftsCreated, setNftsCreated] = useState([]);
+  const [followers, setFollowers] = useState([]);
+  const [following, setFollowing] = useState([]);
+  const [showFollowers, setShowFollowers] = useState(false);
+  const [showFollowing, setShowFollowing] = useState(false);
 
   useEffect(() => {
     const getSeller = async () => {
@@ -15,6 +21,8 @@ const Seller = ({ match }) => {
         .then((res) => {
           setSeller(res.data);
           setNftsCreated(res.data.created);
+          setFollowers(res.data.followers);
+          setFollowing(res.data.following);
         })
         .catch((error) => console.log(error));
     };
@@ -29,6 +37,7 @@ const Seller = ({ match }) => {
           {`${seller.name} ${seller.lastname}`}
         </h1>
         <p className="text-gray-400">@{seller.username}</p>
+
         <div className="mt-10 flex items-center shadow rounded-lg justify-around">
           <div
             style={{ backgroundColor: "#1F51FF" }}
@@ -37,15 +46,26 @@ const Seller = ({ match }) => {
             <p className="font-medium">{nftsCreated.length}</p>
             <p className="font-medium">Created</p>
           </div>
-          <div className="text-center w-28 bg-white cursor-pointer border-r-2 p-2">
-            <p>{seller.following}</p>
+          <div
+            onClick={() => {
+              setShowFollowing(!showFollowing);
+            }}
+            className="text-center w-28 bg-white cursor-pointer border-r-2 p-2"
+          >
+            <p>{following.length}</p>
             <p className="font-medium text-gray-800">Following</p>
           </div>
-          <div className="text-center w-28 bg-white cursor-pointer p-2 rounded-r-lg">
-            <p>{seller.followers}</p>
+          <div
+            onClick={() => {
+              setShowFollowers(!showFollowers);
+            }}
+            className="text-center w-28 bg-white cursor-pointer p-2 rounded-r-lg"
+          >
+            <p>{followers.length}</p>
             <p className="font-medium text-gray-800">Followers</p>
           </div>
         </div>
+
         <div className="pl-2 w-full mt-10">
           <h1 className="text-lg font-medium text-gray-600">NFTs Created</h1>
         </div>
@@ -57,6 +77,18 @@ const Seller = ({ match }) => {
           ))}
         </div>
       </div>
+
+      <Followers
+        followers={followers}
+        setShowFollowers={setShowFollowers}
+        showFollowers={showFollowers}
+      />
+
+      <Following
+        following={following}
+        showFollowing={showFollowing}
+        closeFollowing={() => setShowFollowing(false)}
+      />
     </div>
   );
 };

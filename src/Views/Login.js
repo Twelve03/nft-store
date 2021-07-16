@@ -4,7 +4,7 @@ import { AiOutlineGoogle, AiFillApple, AiOutlineTwitter } from "react-icons/ai";
 const Login = () => {
   return (
     <div className="h-screen flex items-center justify-center">
-      <form className="-mt-4 h-4/5 w-4/5 flex flex-col items-left">
+      <form className="-mt-4 md:mt-10 h-4/5 w-4/5 flex flex-col items-left">
         <p className="text-3xl font-bold mb-10">Log in</p>
         <p className="mb-4">Log in with one of the following options.</p>
         <div className="mb-7 flex text-xl items-center justify-around">

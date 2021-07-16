@@ -4,7 +4,6 @@ import FeaturedNfts from "../Components/HomeComponents/FeaturedNfts";
 import LiveAuctions from "../Components/HomeComponents/LiveAuctions";
 import FeaturedSellers from "../Components/HomeComponents/FeaturedSellers";
 import Explore from "../Components/HomeComponents/Explore";
-import Footer from "../Components/Footer";
 
 const Home = () => {
   const exploreRef = useRef(null);
@@ -41,28 +40,41 @@ const Home = () => {
             }}
             className="relative bg-cover bg-center mt-20 w-72 h-32 rounded-lg shadow-lg"
           >
-            <p className="p-3 font-delagothicone text-white text-sm">Top NFT of the week!</p>
-            <button style={{ backgroundColor: "#1F51FF" }} className="absolute bottom-2 right-2 text-xs h-5 w-12 text-white font-bold rounded-full">
+            <p className="p-3 font-delagothicone text-white text-sm">
+              Top NFT of the week!
+            </p>
+            <button
+              style={{ backgroundColor: "#1F51FF" }}
+              className="absolute bottom-2 right-2 text-xs h-5 w-12 text-white font-bold rounded-full"
+            >
               Buy
             </button>
           </div>
         </Link>
 
-        <h1 className="font-delagothicone mt-16 mb-3 text-2xl w-full">Featured NFTs</h1>
+        <h1 className="font-delagothicone mt-16 mb-3 text-2xl w-full">
+          Featured NFTs
+        </h1>
         <FeaturedNfts />
 
-        <h1 className="font-delagothicone mt-16 mb-4 text-2xl">Live auctions</h1>
+        <h1 className="font-delagothicone mt-16 mb-4 text-2xl">
+          Live auctions
+        </h1>
         <LiveAuctions />
 
-        <h1 className="font-delagothicone mt-16 mb-3 text-2xl w-full">We recommend</h1>
+        <h1 className="font-delagothicone mt-16 mb-3 text-2xl w-full">
+          We recommend
+        </h1>
         <FeaturedSellers />
 
-        <h1 ref={exploreRef} className="font-delagothicone mt-16 mb-4 text-2xl w-full">
+        <h1
+          ref={exploreRef}
+          className="font-delagothicone mt-16 mb-4 text-2xl w-full"
+        >
           Explore
         </h1>
         <Explore />
       </div>
-      <Footer />
     </div>
   );
 };

@@ -2,9 +2,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Home from "./Views/Home";
 import Search from "./Views/Search";
+import About from "./Views/About";
 import Login from "./Views/Login";
 import Signup from "./Views/Signup";
-import About from "./Views/About";
+import Footer from "./Components/Footer";
 import Nft from "./Components/Nft";
 import Seller from "./Components/Seller";
 import ScrollToTop from "./Components/ScrollToTop";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
