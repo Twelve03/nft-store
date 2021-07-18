@@ -10,9 +10,9 @@ const Home = () => {
   const executeScroll = () => exploreRef.current.scrollIntoView();
 
   return (
-    <div>
+    <div className="xl:flex xl:flex-col xl:items-center">
       {/* Landing Page */}
-      <div className="p-2 flex justify-between sm:justify-around flex-col items-left h-screen w-full bg-black bg-cover bg-center">
+      <div className="p-2 flex justify-between sm:justify-around flex-col items-left h-screen w-full bg-black">
         <img
           src="https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711&dl=1"
           alt=""
@@ -31,8 +31,8 @@ const Home = () => {
         </button>
       </div>
 
-      {/* Top NFT */}
-      <div className="p-3 flex flex-col items-center">
+      <div style={{ maxWidth: "1300px" }} className="p-3 flex flex-col items-center">
+        {/* Top NFT */}
         <Link to={"/nft/17"}>
           <div
             style={{

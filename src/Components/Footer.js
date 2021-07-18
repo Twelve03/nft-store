@@ -35,7 +35,7 @@ const Footer = () => {
           value="Sign Up!"
         ></input>
       </form>
-      <div className="mt-16 flex w-full items-center justify-around">
+      <div style={{maxWidth: "1300px"}} className="mt-16 flex w-full items-center justify-around">
         <TiSocialTwitter className="cursor-pointer text-2xl" />
         <TiSocialYoutube className="cursor-pointer text-2xl" />
         <TiSocialFacebookCircular className="cursor-pointer text-2xl" />

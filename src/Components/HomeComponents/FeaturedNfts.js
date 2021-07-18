@@ -16,7 +16,7 @@ const FeaturedNfts = () => {
                 <img
                   src={nft.img}
                   alt={nft.name}
-                  className="h-48 w-48 rounded-lg  transform transition duration-500 hover:scale-110 hover:shadow-blue"
+                  className="h-48 w-48 rounded-lg transform transition duration-500 hover:scale-110 hover:shadow-md"
                 />
                 <p className="font-bold text-gray-800 text-sm">{nft.name}</p>
               </div>

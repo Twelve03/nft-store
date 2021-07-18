@@ -26,14 +26,17 @@ const Explore = () => {
 
   return (
     <div
-      className="w-full h-full"
+      className="w-full h-full xl:flex xl:flex-col xl:items-center"
       onClick={() => {
         if (showSort) {
           setShowSort(!showSort);
         }
       }}
     >
-      <div className="flex items-center justify-between h-20 w-full">
+      <div
+        style={{ maxWidth: "1300px" }}
+        className="flex items-center justify-between h-20 w-full"
+      >
         <button
           className="w-10 hover:bg-black hover:text-white transition duration-300 ease-in-out shadow"
           onClick={getNfts}
