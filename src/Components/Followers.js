@@ -8,10 +8,10 @@ const Followers = ({ followers, showFollowers, setShowFollowers }) => {
     enter: { opacity: 1 },
     leave: { opacity: 0 },
   });
-  const menuTransition = useTransition(showFollowers, {
-    from: { opacity: 0, transform: "translateX(-100%)" },
-    enter: { opacity: 1, transform: "translateX(0%)" },
-    leave: { opacity: 0, transform: "translateX(-100%)" },
+  const listTransition = useTransition(showFollowers, {
+    from: { transform: "translateY(100%)" },
+    enter: { transform: "translateY(0%)" },
+    leave: { transform: "translateY(100%)" },
   });
 
   return (
@@ -27,11 +27,11 @@ const Followers = ({ followers, showFollowers, setShowFollowers }) => {
           )
       )}
 
-      {menuTransition(
+      {listTransition(
         (styles, item) =>
           item && (
             <animated.div
-              styles={styles}
+              style={styles}
               className="fixed flex flex-col items-center justify-center bottom-0 h-3/5 rounded-t-3xl w-full bg-white"
             >
               <h1>Followers</h1>

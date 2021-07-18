@@ -52,7 +52,7 @@ const Search = () => {
                 style={{ backgroundImage: `url("${nft.img}")` }}
                 className="h-64 w-64 bg-cover bg-center mb-8 rounded-3xl p-6"
               >
-                <p className="font-bold font-xl">{nft.name}</p>
+                <p className="font-bold font-xl text-white">{nft.name}</p>
               </div>
             </Link>
           ))}

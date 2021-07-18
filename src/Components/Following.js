@@ -11,9 +11,9 @@ const Following = ({ following, showFollowing, closeFollowing }) => {
   });
 
   const listTransition = useTransition(showFollowing, {
-    from: { opacity: 0, transform: "translateY(-100%)" },
-    enter: { opacity: 1, transform: "translateY(0%)" },
-    leave: { opacity: 0, transform: "translateY(-100%)" },
+    from: { transform: "translateY(100%)" },
+    enter: { transform: "translateY(0%)" },
+    leave: { transform: "translateY(100%)" },
   });
 
   return (
@@ -33,7 +33,7 @@ const Following = ({ following, showFollowing, closeFollowing }) => {
         (styles, item) =>
           item && (
             <animated.div
-              styles={styles}
+              style={styles}
               className="fixed flex flex-col items-center justify-center bottom-0 h-3/5 rounded-t-3xl w-full bg-white"
             >
               <h1>Following</h1>

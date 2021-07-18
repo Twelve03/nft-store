@@ -32,12 +32,14 @@ const Seller = ({ match }) => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="pt-16 flex flex-col items-center min-h-screen w-4/5">
+        {/* Seller Info */}
         <img className="rounded-lg mb-2" src={seller.avatar} alt="" />
         <h1 className="text-xl font-bold">
           {`${seller.name} ${seller.lastname}`}
         </h1>
         <p className="text-gray-400">@{seller.username}</p>
 
+        {/* Created|Following|Followers layout*/}
         <div className="mt-10 flex items-center shadow rounded-lg justify-around">
           <div
             style={{ backgroundColor: "#1F51FF" }}
@@ -46,6 +48,7 @@ const Seller = ({ match }) => {
             <p className="font-medium">{nftsCreated.length}</p>
             <p className="font-medium">Created</p>
           </div>
+
           <div
             onClick={() => {
               setShowFollowing(!showFollowing);
@@ -55,6 +58,7 @@ const Seller = ({ match }) => {
             <p>{following.length}</p>
             <p className="font-medium text-gray-800">Following</p>
           </div>
+
           <div
             onClick={() => {
               setShowFollowers(!showFollowers);
@@ -66,6 +70,19 @@ const Seller = ({ match }) => {
           </div>
         </div>
 
+        {/* Followers and Following buttons*/}
+        <Followers
+          followers={followers}
+          setShowFollowers={setShowFollowers}
+          showFollowers={showFollowers}
+        />
+        <Following
+          following={following}
+          showFollowing={showFollowing}
+          closeFollowing={() => setShowFollowing(false)}
+        />
+
+        {/* Array of NFTs created by seller*/}
         <div className="pl-2 w-full mt-10">
           <h1 className="text-lg font-medium text-gray-600">NFTs Created</h1>
         </div>
@@ -77,18 +94,6 @@ const Seller = ({ match }) => {
           ))}
         </div>
       </div>
-
-      <Followers
-        followers={followers}
-        setShowFollowers={setShowFollowers}
-        showFollowers={showFollowers}
-      />
-
-      <Following
-        following={following}
-        showFollowing={showFollowing}
-        closeFollowing={() => setShowFollowing(false)}
-      />
     </div>
   );
 };
