@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="mt-10 flex flex-col items-center justify-between bg-gray-200 border-2">
+    <footer className="mt-8 flex flex-col items-center justify-between bg-gray-200 border-2">
       <img
         src="https://i.ibb.co/djPF91c/nfthis-logo.png"
         alt=""
@@ -35,7 +35,7 @@ const Footer = () => {
           value="Sign Up!"
         ></input>
       </form>
-      <div style={{maxWidth: "1300px"}} className="mt-16 flex w-full items-center justify-around">
+      <div style={{maxWidth: "500px"}} className="mt-16 flex w-full items-center justify-around">
         <TiSocialTwitter className="cursor-pointer text-2xl" />
         <TiSocialYoutube className="cursor-pointer text-2xl" />
         <TiSocialFacebookCircular className="cursor-pointer text-2xl" />

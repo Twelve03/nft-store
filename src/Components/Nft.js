@@ -59,7 +59,7 @@ const Nft = ({ match }) => {
         <p className="mb-6 text-gray-600">{nft.description}</p>
 
         {/* Buy and place bid Buttons */}
-        <div className="h-12 w-full flex items-center rounded-lg md:justify-center md:mt-8">
+        <div className="h-12 w-full flex items-center rounded-lg xs:justify-center md:justify-center md:mt-8">
           <button
             onClick={() => setShowError(!showError)}
             style={{ backgroundColor: "#6df238" }}

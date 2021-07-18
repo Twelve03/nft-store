@@ -12,20 +12,20 @@ const Home = () => {
   return (
     <div className="xl:flex xl:flex-col xl:items-center">
       {/* Landing Page */}
-      <div className="p-2 flex justify-between sm:justify-around flex-col items-left h-screen w-full bg-black">
+      <div className="p-2 flex justify-between sm:justify-around flex-col items-left h-screen xs:h-auto w-full bg-black">
         <img
           src="https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711&dl=1"
           alt=""
-          className="h-2/4 pt-10 w-full md:self-center md:w-3/4"
+          className="xs:h-72 h-2/4 pt-10 w-full md:self-center md:w-3/4"
         />
         <p className="text-gray-400 pl-6 -mb-7">NFT Marketplace</p>
-        <h1 className="font-delagothicone text-white pl-6 text-3xl">
+        <h1 className="xs:mt-8 font-delagothicone text-white pl-6 text-3xl">
           NFThis
           <br />━ For those with creative minds.
         </h1>
         <button
           onClick={executeScroll}
-          className="mb-7 ml-6 w-32 sm:w-1/4 md:w-1/6 h-12 bg-transparent text-gray-200 font-bold border rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out"
+          className="xs:mt-8 mb-7 ml-6 w-32 sm:w-1/4 md:w-1/6 h-12 bg-transparent text-gray-200 font-bold border rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out"
         >
           Explore
         </button>

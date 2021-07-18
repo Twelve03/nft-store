@@ -30,8 +30,8 @@ const Seller = ({ match }) => {
   }, [match]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="pt-16 flex flex-col items-center min-h-screen w-4/5">
+    <div className="flex h-auto items-center justify-center">
+      <div className="mt-14 md:mt-20 flex flex-col items-center h-auto w-4/5">
         {/* Seller Info */}
         <img className="rounded-lg mb-2" src={seller.avatar} alt="" />
         <h1 className="text-xl font-bold">
@@ -83,10 +83,10 @@ const Seller = ({ match }) => {
         />
 
         {/* Array of NFTs created by seller*/}
-        <div className="pl-2 w-full mt-10">
+        <div style={{maxWidth: '1300px'}} yclassName="pl-2 w-full mt-10">
           <h1 className="text-lg font-medium text-gray-600">NFTs Created</h1>
         </div>
-        <div className="flex flex-wrap justify-around items-center w-full">
+        <div style={{maxWidth: '1300px'}} className="flex flex-wrap justify-around items-center w-full">
           {nftsCreated.map((nft) => (
             <Link key={nft.id} to={`/nft/${nft.id}`}>
               <img src={nft.img} className="m-2 rounded-lg h-64 w-64" alt="" />
