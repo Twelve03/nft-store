@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import axios from "axios";
 
@@ -47,14 +48,16 @@ const Nft = ({ match }) => {
 
         {/* Creator div*/}
         <p className="font-bold text-gray-800 mt-4">Creator:</p>
-        <div className="mb-4 p-3 w-3/4 flex text-white items-center">
-          <img
-            src={nft.avatar}
-            className="mr-2 h-10 w-10 rounded-full"
-            alt="creator-name"
-          />
-          <p className="text-lg text-black font-bold">@{nft.creator}</p>
-        </div>
+        <Link to={`/seller/${nft.creatorid}`}>
+          <div className="mb-4 p-3 w-3/4 flex text-white items-center">
+            <img
+              src={nft.avatar}
+              className="mr-2 h-10 w-10 rounded-full"
+              alt="creator-name"
+            />
+            <p className="text-lg text-black font-bold">@{nft.creator}</p>
+          </div>
+        </Link>
 
         <p className="mb-6 text-gray-600">{nft.description}</p>
 

@@ -83,7 +83,7 @@ const Seller = ({ match }) => {
         />
 
         {/* Array of NFTs created by seller*/}
-        <div style={{maxWidth: '1300px'}} yclassName="pl-2 w-full mt-10">
+        <div style={{maxWidth: '1300px'}} className="pl-2 w-full mt-10">
           <h1 className="text-lg font-medium text-gray-600">NFTs Created</h1>
         </div>
         <div style={{maxWidth: '1300px'}} className="flex flex-wrap justify-around items-center w-full">
