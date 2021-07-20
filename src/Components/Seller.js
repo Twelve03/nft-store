@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Followers from "./Followers";
-import Following from "./Following";
+import Followers from "./SellerComponents/Followers";
+import Following from "./SellerComponents/Following";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -83,10 +83,13 @@ const Seller = ({ match }) => {
         />
 
         {/* Array of NFTs created by seller*/}
-        <div style={{maxWidth: '1300px'}} className="pl-2 w-full mt-10">
+        <div style={{ maxWidth: "1300px" }} className="pl-2 w-full mt-10">
           <h1 className="text-lg font-medium text-gray-600">NFTs Created</h1>
         </div>
-        <div style={{maxWidth: '1300px'}} className="flex flex-wrap justify-around items-center w-full">
+        <div
+          style={{ maxWidth: "1300px" }}
+          className="flex flex-wrap justify-around items-center w-full"
+        >
           {nftsCreated.map((nft) => (
             <Link key={nft.id} to={`/nft/${nft.id}`}>
               <img src={nft.img} className="m-2 rounded-lg h-64 w-64" alt="" />

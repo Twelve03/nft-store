@@ -6,7 +6,7 @@ import axios from "axios";
 const Nft = ({ match }) => {
   const [nft, setNft] = useState({});
   const [showError, setShowError] = useState(false);
-
+  
   // Animations
   const maskTransition = useTransition(showError, {
     from: { opacity: 0 },
@@ -68,7 +68,7 @@ const Nft = ({ match }) => {
             style={{ backgroundColor: "#6df238" }}
             className="mr-3 w-48 h-12 text-white font-bold rounded-full md:mr-8"
           >
-            Buy for ${nft.price}
+            Buy for {nft.price} ETH
           </button>
           <button
             onClick={() => setShowError(!showError)}

@@ -39,7 +39,10 @@ const Explore = () => {
       >
         <button
           className="w-10 hover:bg-black hover:text-white transition duration-300 ease-in-out shadow"
-          onClick={getNfts}
+          onClick={() => {
+            getNfts();
+            setNumOfElem(5);
+          }}
         >
           All
         </button>
@@ -48,9 +51,10 @@ const Explore = () => {
             <p
               key={categories.indexOf(category)}
               className="mr-2 cursor-pointer w-24 font-bold text-gray-800 text-sm"
-              onClick={() =>
-                setNfts(nfts.filter((nft) => nft.category === category))
-              }
+              onClick={() => {
+                setNfts(nfts.filter((nft) => nft.category === category));
+                setNumOfElem(5);
+              }}
             >
               {category}
             </p>
@@ -72,7 +76,7 @@ const Explore = () => {
               />
               <div className="pb-3 bg-white bg-opacity-70 flex flex-col items-center justify-end absolute bottom-5 z-1 h-56 rounded-lg shadow-lg border-t-2 w-72">
                 <p>{nft.name}</p>
-                <p className="font-bold">${nft.price}</p>
+                <p className="font-bold">{nft.price} ETH</p>
               </div>
             </div>
           </Link>
