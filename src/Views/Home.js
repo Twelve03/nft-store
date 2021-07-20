@@ -16,7 +16,7 @@ const Home = () => {
         <img
           src="https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711&dl=1"
           alt=""
-          className="xs:h-72 h-2/4 pt-10 w-full md:self-center md:w-3/4"
+          className="xs:h-72 h-2/4 pt-10 w-full md:self-center md:w-3/4 xl:w-2/4 2xl:w-2/6"
         />
         <p className="text-gray-400 pl-6 -mb-7">NFT Marketplace</p>
         <h1 className="xs:mt-8 font-delagothicone text-white pl-6 text-3xl">

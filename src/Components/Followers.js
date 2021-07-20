@@ -32,17 +32,17 @@ const Followers = ({ followers, showFollowers, setShowFollowers }) => {
           item && (
             <animated.div
               style={styles}
-              className="fixed flex flex-col items-center justify-center bottom-0 h-3/5 rounded-t-3xl w-full bg-white"
+              className="fixed flex flex-col items-center justify-center bottom-0 h-3/5 rounded-t-3xl w-full bg-white md:w-3/4 xl:w-2/4"
             >
-              <h1>Followers</h1>
-              <div className="overflow-y-scroll p-3 h-3/4 w-full flex flex-wrap items-center justify-center">
+              <h1 className="text-xl font-bold">Followers</h1>
+              <div className="overflow-y-scroll p-3 h-4/5 w-3/4 flex flex-col">
                 {followers.map((follower) => (
                   <Link
                     onClick={() => setShowFollowers(false)}
                     key={follower.id}
                     to={`/seller/${follower.id}`}
                   >
-                    <div className="md:m-8 m-2 flex items-center">
+                    <div className="m-2 flex items-center">
                       <img
                         src={follower.avatar}
                         className="mr-2 h-12 w-12 rounded-full"

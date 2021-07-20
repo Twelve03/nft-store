@@ -34,17 +34,17 @@ const Following = ({ following, showFollowing, closeFollowing }) => {
           item && (
             <animated.div
               style={styles}
-              className="fixed flex flex-col items-center justify-center bottom-0 h-3/5 rounded-t-3xl w-full bg-white"
+              className="fixed flex flex-col items-center justify-center bottom-0 h-3/5 rounded-t-3xl w-full bg-white md:w-3/4 xl:w-2/4"
             >
-              <h1>Following</h1>
-              <div className="overflow-y-scroll p-3 h-3/4 w-full flex flex-wrap items-center justify-center">
+              <h1 className="text-xl font-bold">Following</h1>
+              <div style={{maxWidth: "800px"}} className="overflow-y-scroll p-3 h-4/5 w-3/4 flex flex-col">
                 {following.map((following) => (
                   <Link
                     onClick={closeFollowing}
                     key={following.id}
                     to={`/seller/${following.id}`}
                   >
-                    <div className="md:m-8 m-2 flex items-center">
+                    <div className="m-2 flex items-center">
                       <img
                         src={following.avatar}
                         className="mr-2 h-12 w-12 rounded-full"
