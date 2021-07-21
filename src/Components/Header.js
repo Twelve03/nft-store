@@ -7,26 +7,44 @@ const Header = () => {
       <MobileNav />
 
       {/* Desktop Nav */}
-      <div className="w-2/4 items-center hidden md:flex justify-around text-pink-600">
-        <Link to="/" className="transition duration-200 ease-in-out focus:text-blue-600 hover:text-blue-600">
-          Home
-        </Link>
+      <div className="relative w-full items-center hidden md:flex justify-center text-pink-600">
+        <div className="w-1/4 flex justify-around">
+          <Link
+            to="/"
+            className="transition duration-200 ease-in-out focus:text-blue-600 hover:text-blue-600"
+          >
+            Home
+          </Link>
 
-        <Link to="/search" className="transition duration-200 ease-in-out focus:text-blue-600 hover:text-blue-600">
-          Search
-        </Link>
+          <Link
+            to="/search"
+            className="transition duration-200 ease-in-out focus:text-blue-600 hover:text-blue-600"
+          >
+            Search
+          </Link>
 
-        <Link to="/about" className="transition duration-200 ease-in-out focus:text-blue-600 hover:text-blue-600">
-          About
-        </Link>
+          <Link
+            to="/about"
+            className="transition duration-200 ease-in-out focus:text-blue-600 hover:text-blue-600"
+          >
+            About
+          </Link>
+        </div>
+        <div className="absolute right-0 w-1/5 flex justify-center">
+          <Link
+            to="/login"
+            className="mr-4 transition duration-200 ease-in-out focus:text-blue-600 hover:text-blue-600"
+          >
+            Log in
+          </Link>
 
-        <Link to="/login" className="transition duration-200 ease-in-out focus:text-blue-600 hover:text-blue-600">
-          Log in
-        </Link>
-
-        <Link to="/signup" className="transition duration-200 ease-in-out focus:text-blue-600 hover:text-blue-600">
-          Sign up
-        </Link>
+          <Link
+            to="/signup"
+            className="transition duration-200 ease-in-out focus:text-blue-600 hover:text-blue-600"
+          >
+            Sign up
+          </Link>
+        </div>
       </div>
 
       {/* Logo */}
